@@ -1,4 +1,7 @@
-﻿using System;
+﻿using _30XX_Save_Editor;
+using _30XX_Save_Editor.Properties;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +22,7 @@ namespace Simple_30XX_Save_Editor
         private byte[] orbs = new byte[4];
         private byte[] itemValues = new byte[14];
         private int[] itemDecimals = new int[5];
+        Image ace = Resources.ace_leviathan;
 
         private static readonly Dictionary<int, string> ItemIDs = new Dictionary<int, string>()
         {
@@ -261,6 +265,17 @@ namespace Simple_30XX_Save_Editor
             {557, "Pain Circuit"},
             {558, "Rage Circuit"},
             {559, "Scrap Trawler"},
+            {560, "Charisma Protocol"},
+            {561, "Armor Integrator"},
+            {562, "Autocompleter"},
+            {563, "Scrap Sleuth"},
+            {564, "Smuggler Attractor"},
+            {565, "Scrappy Scrapper"},
+            {566, "Useless Garbage"},
+            {567, "Into the Fray"},
+            {568, "Patient Hunter"},
+            {569, "Doppelgel"},
+            {571, "Superweight"},
             {650, "CQC Enthusiast"},
             {651, "Combo Demon"},
             {652, "Zephyr"},
@@ -330,8 +345,10 @@ namespace Simple_30XX_Save_Editor
             {792, "Defiant Decree"},
             {793, "Violence Enhancer"},
             {794, "Uncharging Force"},
-            {795, "Vitality Partitioner"},
+            {795, "Blinding Hysteria"},
             {796, "Solution Gambler"},
+            {797, "Grey Goo"},
+            {798, "The One and Only"},
             {800, "Debilitating"},
             {801, "Defiant"},
             {802, "Famished"},
@@ -344,6 +361,11 @@ namespace Simple_30XX_Save_Editor
             {809, "Fragile"},
             {810, "Purifying"},
             {811, "Thieving"},
+            {812, "Edges of Madness"},
+            {813, "Final Shell"},
+            {814, "Purifying Waters"},
+            {815, "Contractor Beta"},
+            {816, "Zookeeper's Burden"},
             {850, "datalore received"},
             {851, "Armor Capsule"},
             {852, "Potentia Fragments"},
@@ -429,7 +451,25 @@ namespace Simple_30XX_Save_Editor
             {959, "Falling Star"},
             {960, "Astral Terminus"},
             {962, "Sacred Minnow"},
-            {963, "Enter the Void"}
+            {963, "Enter the Void"},
+            {965, "Saber Impulse"},
+            {966, "Resonant Saber"},
+            {967, "Super Tonbo"},
+            {968, "Deadly Precision"},
+            {969, "Wavethrower"},
+            {970, "Shock Actuator"},
+            {971, "Effortless Blades"},
+            {972, "Phase Knives"},
+            {973, "Lingering Fist"},
+            {974, "Rapid Fist"},
+            {975, "Cycling Edge"},
+            {976, "Magnetic Edge"},
+            {977, "Lethal Evade"},
+            {978, "Critical Blade"},
+            {979, "Reaper's Call"},
+            {980, "Graceful Spinning"},
+            {981, "Chainbind"},
+            {982, "Stylestrike"}
         };
 
         public Form1()
@@ -513,13 +553,24 @@ namespace Simple_30XX_Save_Editor
                         labels[i].Text = comboBoxes[i].SelectedValue.ToString();
                     }
 
+                    //imageComboBox1.DataSource = new BindingSource(ItemIDs, null);
+                    //imageComboBox1.DisplayMember = "Value";
+                    //imageComboBox1.ValueMember = "Key";
+                    //imageComboBox1.SelectedValue = 911;
+
+                    foreach (KeyValuePair<int, string> pair in ItemIDs)
+                    {
+                        ImageComboBoxItem item = new ImageComboBoxItem(pair.Value, pair.Key, ace);
+                        imageComboBox1.Items.Add(item);
+                    }
+
+
 
                     comboBox1.SelectedIndexChanged += ComboBox1_SelectedIndexChanged;
                     comboBox2.SelectedIndexChanged += ComboBox2_SelectedIndexChanged;
                     comboBox3.SelectedIndexChanged += ComboBox3_SelectedIndexChanged;
                     comboBox4.SelectedIndexChanged += ComboBox4_SelectedIndexChanged;
                     comboBox5.SelectedIndexChanged += ComboBox5_SelectedIndexChanged;
-
 
                     SaveButton.Enabled = true;
                 }
@@ -530,6 +581,7 @@ namespace Simple_30XX_Save_Editor
                 }
             }
         }
+
 
 
 
@@ -627,6 +679,10 @@ namespace Simple_30XX_Save_Editor
         {
             label5.Text = comboBox5.SelectedValue.ToString();
         }
+
     }
+
+
+
 
 }

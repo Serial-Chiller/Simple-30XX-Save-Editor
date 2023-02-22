@@ -48,6 +48,7 @@ namespace Simple_30XX_Save_Editor
             this.WarningLabel = new System.Windows.Forms.Label();
             this.orbsNumeric = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
+            this.imageComboBox1 = new _30XX_Save_Editor.ImageComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.memoriaNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orbsNumeric)).BeginInit();
             this.SuspendLayout();
@@ -210,11 +211,23 @@ namespace Simple_30XX_Save_Editor
             this.label7.TabIndex = 17;
             this.label7.Text = "Titan Shards";
             // 
+            // imageComboBox1
+            // 
+            this.imageComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.imageComboBox1.FormattingEnabled = true;
+            this.imageComboBox1.ItemHeight = 50;
+            this.imageComboBox1.Location = new System.Drawing.Point(25, 429);
+            this.imageComboBox1.Name = "imageComboBox1";
+            this.imageComboBox1.Size = new System.Drawing.Size(127, 56);
+            this.imageComboBox1.TabIndex = 18;
+            this.imageComboBox1.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(273, 475);
+            this.ClientSize = new System.Drawing.Size(273, 465);
+            this.Controls.Add(this.imageComboBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.orbsNumeric);
             this.Controls.Add(this.WarningLabel);
@@ -262,6 +275,7 @@ namespace Simple_30XX_Save_Editor
         private Label WarningLabel;
         private NumericUpDown orbsNumeric;
         private Label label7;
+        private _30XX_Save_Editor.ImageComboBox imageComboBox1;
     }
 }
 
