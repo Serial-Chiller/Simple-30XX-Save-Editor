@@ -496,7 +496,7 @@ namespace Simple_30XX_Save_Editor
                     stream.Seek(0xC, SeekOrigin.Begin);
                     stream.Read(orbs, 0, 4);
 
-                    stream.Seek(0x862, SeekOrigin.Begin);
+                    stream.Seek(0x863, SeekOrigin.Begin);
                     stream.Read(itemValues, 0, 14);
 
                 }
@@ -641,19 +641,19 @@ namespace Simple_30XX_Save_Editor
                     fileStream.Seek(0xC, SeekOrigin.Begin);
                     fileStream.Write(orbs, 0, 4);
 
-                    fileStream.Seek(0x862, SeekOrigin.Begin);
+                    fileStream.Seek(0x863, SeekOrigin.Begin);
                     fileStream.Write(item1, 0, item1.Length);
 
-                    fileStream.Seek(0x865, SeekOrigin.Begin);
+                    fileStream.Seek(0x866, SeekOrigin.Begin);
                     fileStream.Write(item2, 0, item2.Length);
 
-                    fileStream.Seek(0x868, SeekOrigin.Begin);
+                    fileStream.Seek(0x869, SeekOrigin.Begin);
                     fileStream.Write(item3, 0, item3.Length);
 
-                    fileStream.Seek(0x86B, SeekOrigin.Begin);
+                    fileStream.Seek(0x86C, SeekOrigin.Begin);
                     fileStream.Write(item4, 0, item4.Length);
 
-                    fileStream.Seek(0x86E, SeekOrigin.Begin);
+                    fileStream.Seek(0x86F, SeekOrigin.Begin);
                     fileStream.Write(item5, 0, item5.Length);
                 }
             }
