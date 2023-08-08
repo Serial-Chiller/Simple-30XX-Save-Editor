@@ -20,6 +20,7 @@ namespace Simple_30XX_Save_Editor
     {
         private byte[] memoria = new byte[4];
         private byte[] orbs = new byte[4];
+        private byte[] entropy = new byte[4];
         private byte[] itemValues = new byte[14];
         private int[] itemDecimals = new int[5];
         Image ace = Resources.ace_leviathan;
@@ -499,6 +500,9 @@ namespace Simple_30XX_Save_Editor
                     stream.Seek(0x863, SeekOrigin.Begin);
                     stream.Read(itemValues, 0, 14);
 
+                    stream.Seek(0x872, SeekOrigin.Begin);
+                    stream.Read(entropy, 0, 1);
+
                 }
 
                 Array.Reverse(memoria);
@@ -515,7 +519,8 @@ namespace Simple_30XX_Save_Editor
 
                 int memoriaDecimal = BitConverter.ToInt32(memoria, 0);
                 int orbsDecimal = BitConverter.ToInt32(orbs, 0);
-
+                int entropyDecimal = BitConverter.ToInt32(entropy, 0);
+                
 
                 for (int i = 0; i < 5; i++)
                 {
@@ -543,6 +548,7 @@ namespace Simple_30XX_Save_Editor
                 {
                     memoriaNumeric.Value = memoriaDecimal;
                     orbsNumeric.Value = orbsDecimal;
+                    ecNumeric.Value = entropyDecimal;
 
                     for (int i = 0; i < 5; i++)
                     {
@@ -618,6 +624,8 @@ namespace Simple_30XX_Save_Editor
                 orbs = BitConverter.GetBytes((int)orbsNumeric.Value);
                 Array.Reverse(orbs);
 
+                entropy = BitConverter.GetBytes((int)ecNumeric.Value);
+
                 byte[] item1 = BitConverter.GetBytes((Int16)(int)comboBox1.SelectedValue);
                 Array.Reverse(item1);
 
@@ -655,6 +663,9 @@ namespace Simple_30XX_Save_Editor
 
                     fileStream.Seek(0x86F, SeekOrigin.Begin);
                     fileStream.Write(item5, 0, item5.Length);
+
+                    fileStream.Seek(0x872, SeekOrigin.Begin);
+                    fileStream.Write(entropy, 0, 1);
                 }
             }
         }
