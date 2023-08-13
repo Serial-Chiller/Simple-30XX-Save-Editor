@@ -45,7 +45,6 @@ namespace Simple_30XX_Save_Editor
             this.SaveButton = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.memoriaNumeric = new System.Windows.Forms.NumericUpDown();
-            this.WarningLabel = new System.Windows.Forms.Label();
             this.orbsNumeric = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.imageComboBox1 = new _30XX_Save_Editor.ImageComboBox();
@@ -58,7 +57,7 @@ namespace Simple_30XX_Save_Editor
             // 
             // OpenButton
             // 
-            this.OpenButton.Location = new System.Drawing.Point(25, 72);
+            this.OpenButton.Location = new System.Drawing.Point(25, 17);
             this.OpenButton.Name = "OpenButton";
             this.OpenButton.Size = new System.Drawing.Size(64, 20);
             this.OpenButton.TabIndex = 0;
@@ -69,7 +68,7 @@ namespace Simple_30XX_Save_Editor
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 212);
+            this.label1.Location = new System.Drawing.Point(25, 157);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 13);
             this.label1.TabIndex = 1;
@@ -78,7 +77,7 @@ namespace Simple_30XX_Save_Editor
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 264);
+            this.label2.Location = new System.Drawing.Point(25, 209);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 13);
             this.label2.TabIndex = 2;
@@ -87,7 +86,7 @@ namespace Simple_30XX_Save_Editor
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 316);
+            this.label3.Location = new System.Drawing.Point(25, 261);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 13);
             this.label3.TabIndex = 3;
@@ -96,7 +95,7 @@ namespace Simple_30XX_Save_Editor
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(25, 368);
+            this.label4.Location = new System.Drawing.Point(25, 313);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 13);
             this.label4.TabIndex = 4;
@@ -105,7 +104,7 @@ namespace Simple_30XX_Save_Editor
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(25, 420);
+            this.label5.Location = new System.Drawing.Point(25, 365);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 13);
             this.label5.TabIndex = 5;
@@ -114,7 +113,7 @@ namespace Simple_30XX_Save_Editor
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(25, 227);
+            this.comboBox1.Location = new System.Drawing.Point(25, 172);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(208, 21);
             this.comboBox1.TabIndex = 6;
@@ -122,7 +121,7 @@ namespace Simple_30XX_Save_Editor
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(25, 279);
+            this.comboBox2.Location = new System.Drawing.Point(25, 224);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(208, 21);
             this.comboBox2.TabIndex = 7;
@@ -130,7 +129,7 @@ namespace Simple_30XX_Save_Editor
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(25, 331);
+            this.comboBox3.Location = new System.Drawing.Point(25, 276);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(208, 21);
             this.comboBox3.TabIndex = 8;
@@ -138,7 +137,7 @@ namespace Simple_30XX_Save_Editor
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(25, 383);
+            this.comboBox4.Location = new System.Drawing.Point(25, 328);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(208, 21);
             this.comboBox4.TabIndex = 9;
@@ -146,7 +145,7 @@ namespace Simple_30XX_Save_Editor
             // comboBox5
             // 
             this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(25, 435);
+            this.comboBox5.Location = new System.Drawing.Point(25, 380);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(208, 21);
             this.comboBox5.TabIndex = 10;
@@ -154,7 +153,7 @@ namespace Simple_30XX_Save_Editor
             // SaveButton
             // 
             this.SaveButton.Enabled = false;
-            this.SaveButton.Location = new System.Drawing.Point(172, 73);
+            this.SaveButton.Location = new System.Drawing.Point(172, 18);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(64, 20);
             this.SaveButton.TabIndex = 11;
@@ -165,7 +164,7 @@ namespace Simple_30XX_Save_Editor
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(25, 111);
+            this.label6.Location = new System.Drawing.Point(25, 56);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 13);
             this.label6.TabIndex = 13;
@@ -173,7 +172,7 @@ namespace Simple_30XX_Save_Editor
             // 
             // memoriaNumeric
             // 
-            this.memoriaNumeric.Location = new System.Drawing.Point(25, 127);
+            this.memoriaNumeric.Location = new System.Drawing.Point(25, 72);
             this.memoriaNumeric.Maximum = new decimal(new int[] {
             2147483647,
             0,
@@ -183,19 +182,9 @@ namespace Simple_30XX_Save_Editor
             this.memoriaNumeric.Size = new System.Drawing.Size(103, 20);
             this.memoriaNumeric.TabIndex = 14;
             // 
-            // WarningLabel
-            // 
-            this.WarningLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WarningLabel.ForeColor = System.Drawing.Color.Red;
-            this.WarningLabel.Location = new System.Drawing.Point(25, 8);
-            this.WarningLabel.Name = "WarningLabel";
-            this.WarningLabel.Size = new System.Drawing.Size(246, 62);
-            this.WarningLabel.TabIndex = 15;
-            this.WarningLabel.Text = "Back up your save file before clicking Save!";
-            // 
             // orbsNumeric
             // 
-            this.orbsNumeric.Location = new System.Drawing.Point(133, 127);
+            this.orbsNumeric.Location = new System.Drawing.Point(133, 72);
             this.orbsNumeric.Maximum = new decimal(new int[] {
             2147483647,
             0,
@@ -208,7 +197,7 @@ namespace Simple_30XX_Save_Editor
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(133, 111);
+            this.label7.Location = new System.Drawing.Point(133, 56);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(67, 13);
             this.label7.TabIndex = 17;
@@ -219,7 +208,7 @@ namespace Simple_30XX_Save_Editor
             this.imageComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.imageComboBox1.FormattingEnabled = true;
             this.imageComboBox1.ItemHeight = 50;
-            this.imageComboBox1.Location = new System.Drawing.Point(25, 462);
+            this.imageComboBox1.Location = new System.Drawing.Point(25, 407);
             this.imageComboBox1.Name = "imageComboBox1";
             this.imageComboBox1.Size = new System.Drawing.Size(127, 56);
             this.imageComboBox1.TabIndex = 18;
@@ -228,7 +217,7 @@ namespace Simple_30XX_Save_Editor
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(25, 154);
+            this.label8.Location = new System.Drawing.Point(25, 99);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(82, 13);
             this.label8.TabIndex = 19;
@@ -236,7 +225,7 @@ namespace Simple_30XX_Save_Editor
             // 
             // ecNumeric
             // 
-            this.ecNumeric.Location = new System.Drawing.Point(25, 171);
+            this.ecNumeric.Location = new System.Drawing.Point(25, 116);
             this.ecNumeric.Maximum = new decimal(new int[] {
             255,
             0,
@@ -250,13 +239,12 @@ namespace Simple_30XX_Save_Editor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(273, 547);
+            this.ClientSize = new System.Drawing.Size(273, 484);
             this.Controls.Add(this.ecNumeric);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.imageComboBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.orbsNumeric);
-            this.Controls.Add(this.WarningLabel);
             this.Controls.Add(this.memoriaNumeric);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.SaveButton);
@@ -299,7 +287,6 @@ namespace Simple_30XX_Save_Editor
         private Button SaveButton;
         private Label label6;
         private NumericUpDown memoriaNumeric;
-        private Label WarningLabel;
         private NumericUpDown orbsNumeric;
         private Label label7;
         private _30XX_Save_Editor.ImageComboBox imageComboBox1;
