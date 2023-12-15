@@ -117,7 +117,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ck gun.ico" />
-    <None Include="Resources\ace_leviathan.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

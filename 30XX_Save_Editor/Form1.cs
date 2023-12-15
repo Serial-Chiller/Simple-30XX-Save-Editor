@@ -23,7 +23,7 @@ namespace Simple_30XX_Save_Editor
         private byte[] entropy = new byte[4];
         private byte[] itemValues = new byte[14];
         private int[] itemDecimals = new int[5];
-        Image ace = Resources.ace_leviathan;
+        //Image ace = Resources.ace_leviathan;
 
         private static readonly Dictionary<int, string> ItemIDs = new Dictionary<int, string>()
         {
@@ -289,6 +289,7 @@ namespace Simple_30XX_Save_Editor
             {653, "Secret Techniques"},
             {654, "Surging Lubricant"},
             {655, "Pressure Strikes"},
+            //{656, "ph"},
             {675, "Barrel Grease"},
             {676, "Power Purist"},
             {677, "Vibrodecay"},
@@ -308,6 +309,31 @@ namespace Simple_30XX_Save_Editor
             {692, "Graceful Strikes"},
             {693, "Vibroharvester"},
             {695, "Scrapbits"},
+            //{724, "Voltage Vampire"},
+            {725, "Bashing Dash"},
+            {726, "Glory Enjoyer"},
+            {727, "Core Protector"},
+            {728, "Core Aggressor"},
+            {729, "Core Collector"},
+            {730, "Efficient Attacker"},
+            {731, "Power Dasher"},
+            {732, "Vital Scrapper"},
+            {733, "Energized Scrapper"},
+            {734, "Efficient Restorer"},
+            {735, "Corogel"},
+            {736, "Friendogel"},
+            {737, "Triplicate Spirits"},
+            {738, "Value Detector"},
+            {739, "Glorious Convocation"},
+            {740, "Unspeakable Act"},
+            {741, "Glorious Production"},
+            {742, "Deadly Momentum"},
+            {743, "Riotous Bulwark"},
+            {744, "Armoreal Pod"},
+            {745, "Decorative Plating"},
+            {746, "High Roller"},
+            {747, "It's Egg!"},
+            {748, "Unstable Defense"},
             {750, "Force"},
             {751, "Sagelens"},
             {752, "Clover"},
@@ -376,6 +402,11 @@ namespace Simple_30XX_Save_Editor
             {816, "Zookeeper's Burden"},
             {817, "Symbol of Submission"},
             {818, "Symbol of Peace"},
+            {819, "Best Friend"},
+            {820, "Tick, Tock"},
+            {821, "Brittle Guard"},
+            {822, "Madness Fountain"},
+            {823, "Rage Insurance"},
             {850, "datalore received"},
             {851, "Armor Capsule"},
             {852, "Potentia Fragments"},
@@ -492,7 +523,7 @@ namespace Simple_30XX_Save_Editor
 
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.InitialDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Documents\\30XX");
-            openFileDialog.FileName = "30XXv001.sav";
+            openFileDialog.FileName = "30XXv002.sav";
             openFileDialog.Filter = "SAV files (*.sav)|*.sav";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -506,10 +537,10 @@ namespace Simple_30XX_Save_Editor
                     stream.Seek(0xC, SeekOrigin.Begin);
                     stream.Read(orbs, 0, 4);
 
-                    stream.Seek(0x863, SeekOrigin.Begin);
+                    stream.Seek(0x9A3, SeekOrigin.Begin);
                     stream.Read(itemValues, 0, 14);
 
-                    stream.Seek(0x872, SeekOrigin.Begin);
+                    stream.Seek(0x9B2, SeekOrigin.Begin);
                     stream.Read(entropy, 0, 1);
 
                 }
@@ -573,11 +604,11 @@ namespace Simple_30XX_Save_Editor
                     //imageComboBox1.ValueMember = "Key";
                     //imageComboBox1.SelectedValue = 911;
 
-                    foreach (KeyValuePair<int, string> pair in ItemIDs)
-                    {
-                        ImageComboBoxItem item = new ImageComboBoxItem(pair.Value, pair.Key, ace);
-                        imageComboBox1.Items.Add(item);
-                    }
+                    //foreach (KeyValuePair<int, string> pair in ItemIDs)
+                    //{
+                    //    ImageComboBoxItem item = new ImageComboBoxItem(pair.Value, pair.Key, ace);
+                    //    imageComboBox1.Items.Add(item);
+                    //}
 
 
 
@@ -623,7 +654,7 @@ namespace Simple_30XX_Save_Editor
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "SAV files (*.sav)|*.sav";
-            saveFileDialog.FileName = "30XXv001.sav";
+            saveFileDialog.FileName = "30XXv002.sav";
             saveFileDialog.InitialDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Documents\\30XX");
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -658,22 +689,22 @@ namespace Simple_30XX_Save_Editor
                     fileStream.Seek(0xC, SeekOrigin.Begin);
                     fileStream.Write(orbs, 0, 4);
 
-                    fileStream.Seek(0x863, SeekOrigin.Begin);
+                    fileStream.Seek(0x9A3, SeekOrigin.Begin);
                     fileStream.Write(item1, 0, item1.Length);
 
-                    fileStream.Seek(0x866, SeekOrigin.Begin);
+                    fileStream.Seek(0x9A6, SeekOrigin.Begin);
                     fileStream.Write(item2, 0, item2.Length);
 
-                    fileStream.Seek(0x869, SeekOrigin.Begin);
+                    fileStream.Seek(0x9A9, SeekOrigin.Begin);
                     fileStream.Write(item3, 0, item3.Length);
 
-                    fileStream.Seek(0x86C, SeekOrigin.Begin);
+                    fileStream.Seek(0x9AC, SeekOrigin.Begin);
                     fileStream.Write(item4, 0, item4.Length);
 
-                    fileStream.Seek(0x86F, SeekOrigin.Begin);
+                    fileStream.Seek(0x9AF, SeekOrigin.Begin);
                     fileStream.Write(item5, 0, item5.Length);
 
-                    fileStream.Seek(0x872, SeekOrigin.Begin);
+                    fileStream.Seek(0x9B2, SeekOrigin.Begin);
                     fileStream.Write(entropy, 0, 1);
                 }
             }

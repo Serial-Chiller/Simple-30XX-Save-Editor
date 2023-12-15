@@ -59,15 +59,5 @@ namespace _30XX_Save_Editor.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ace_leviathan {
-            get {
-                object obj = ResourceManager.GetObject("ace_leviathan", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }
